@@ -138,8 +138,14 @@ class NewsService
     }
 
     // get navbar 4 categories
-    public function getTopCategories($limit = 4)
+    public function getTopCategories($limit = 5)
     {
+        $categoriesCount = News::select('category')
+                                ->groupBy('category')
+                                ->count();
+
+        $limit = min($limit, $categoriesCount);
+
         return News::select('category')
                     ->groupBy('category')
                     ->orderByRaw('COUNT(*) DESC')
