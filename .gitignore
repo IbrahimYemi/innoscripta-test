@@ -1,0 +1,57 @@
+# Frontend - Logs
+/frontend/logs
+/frontend/*.log
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+/frontend/pnpm-debug.log*
+/frontend/lerna-debug.log*
+
+# Frontend - Node modules
+/frontend/node_modules
+
+# Frontend - Build directories
+/frontend/dist
+/frontend/dist-ssr
+
+# Frontend - Local environment files
+/frontend/*.local
+
+# Frontend - Editor directories and files
+/frontend/.vscode/*
+!/frontend/.vscode/extensions.json
+/frontend/.idea
+/frontend/.DS_Store
+/frontend/*.suo
+/frontend/*.ntvs*
+/frontend/*.njsproj
+/frontend/*.sln
+/frontend/*.sw?
+
+# Backend - PHPUnit cache
+/backend/.phpunit.cache
+
+# Backend - Node modules
+/backend/node_modules
+
+# Backend - Public directories
+/backend/public/build
+/backend/public/hot
+/backend/public/storage
+
+# Backend - Storage
+/backend/storage/*.key
+/backend/storage/pail
+
+# Backend - Vendor directory
+/backend/vendor
+
+# Backend - Environment files
+/backend/.env
+
+# Backend - Debug logs
+/backend/npm-debug.log
+
+# Backend - Editor directories and files
+/backend/.vscode
+/backend/.zed
