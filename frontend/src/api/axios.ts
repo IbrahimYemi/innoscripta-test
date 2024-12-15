@@ -1,16 +1,20 @@
-import axios from 'axios';
+import axios from "axios";
+
+axios.defaults.withCredentials = true;
+axios.defaults.withXSRFToken = true;
 
 const apiClient = axios.create({
-  baseURL: 'http://localhost:8000',
+  baseURL: "http://localhost:8000",
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
+    Accept: "application/json",
   },
 });
 
 // Add a request interceptor to include the token
 apiClient.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem('authToken');
+    const token = localStorage.getItem("authToken");
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
@@ -18,6 +22,5 @@ apiClient.interceptors.request.use(
   },
   (error) => Promise.reject(error)
 );
-
 
 export default apiClient;

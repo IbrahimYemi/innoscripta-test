@@ -27,16 +27,19 @@ const Register = () => {
     setPasswordError("");
     register(form.name, form.email, form.password);
   };
-  
+
   useEffect(() => {
     if (loading) {
       dispatch(
-        showStatus({ state: "loading", text: "Processing your registration request..." })
+        showStatus({
+          state: "loading",
+          text: "Processing your registration request...",
+        })
       );
     } else if (error) {
       dispatch(showStatus({ state: "error", text: error }));
     } else {
-        dispatch(clearStatus());
+      dispatch(clearStatus());
     }
   }, [loading, error, dispatch]);
 
@@ -48,11 +51,11 @@ const Register = () => {
       >
         <div className="mt-14 h-24">
           <Link to="/">
-          <img
-            alt="innoscripta logo"
-            src="https://www.innoscripta.com/innoscripta-logo-dark.svg"
-            className="mx-auto"
-          />
+            <img
+              alt="innoscripta logo"
+              src="https://www.innoscripta.com/innoscripta-logo-dark.svg"
+              className="mx-auto"
+            />
           </Link>
         </div>
         <div className="flex items-center justify-center h-auto mt-24">
@@ -78,9 +81,7 @@ const Register = () => {
                 placeholder="Password"
                 min={8}
                 value={form.password}
-                onChange={(e) =>
-                  setForm({ ...form, password: e.target.value })
-                }
+                onChange={(e) => setForm({ ...form, password: e.target.value })}
               />
               <input
                 className="w-full px-8 py-4 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white mt-5"
@@ -115,7 +116,17 @@ const Register = () => {
                   {loading ? "Registering..." : "Sign Up"}
                 </span>
               </button>
-              <p className="italic text-sm font-medium mt-2 flex justify-end">Already registered? <Link className="underline cursor-pointer" to="/login"><span> Login</span></Link></p>
+              <p className="italic text-sm font-medium mt-2 flex justify-end">
+                Already registered?{" "}
+                <Link className="underline cursor-pointer" to="/login">
+                  <span> Login</span>
+                </Link>
+              </p>
+              <p className="italic text-sm font-medium mt-2 flex justify-end">
+                <Link className="underline cursor-pointer" to="/">
+                  <span>Go back Home</span>
+                </Link>
+              </p>
             </div>
           </div>
         </div>

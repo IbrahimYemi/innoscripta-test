@@ -5,17 +5,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./backend:/var/www/html           
-      - ./backend/.env:/var/www/html/.env 
-    environment:
-      APP_ENV: local
-      APP_DEBUG: true
-      APP_KEY: base64:...
-      DB_CONNECTION: mysql
-      DB_HOST: db
-      DB_PORT: 3306
-      DB_DATABASE: skyllrnews_db
-      DB_USERNAME: root
-      DB_PASSWORD: rootpassword
+      - ./backend/.env:/var/www/html/.env
     depends_on:
       - db
 

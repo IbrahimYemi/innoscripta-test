@@ -88,6 +88,11 @@ const Login = () => {
                   <span> Register</span>
                 </Link>
               </p>
+              <p className="italic text-sm font-medium mt-2 flex justify-end">
+                <Link className="underline cursor-pointer" to="/">
+                  <span>Go back Home</span>
+                </Link>
+              </p>
             </div>
           </div>
         </div>
