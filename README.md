@@ -10,7 +10,7 @@ This project contains a React frontend and a Laravel backend, along with a MySQL
 
 1. Clone the repository:
    ```
-   git clone https://github.com/ibrahimyemi/innoscripta.git
+   git clone https://github.com/ibrahimyemi/innoscripta-test.git
    cd my-app
    ```
 
@@ -25,15 +25,6 @@ This project contains a React frontend and a Laravel backend, along with a MySQL
 
 3. The frontend (React) will be available at: [http://localhost](http://localhost)
 4. The backend (Laravel) will be available at: [http://localhost:8000](http://localhost:8000)
-
-## Environment Variables
-
-- The MySQL container uses the following environment variables:
-  - `MYSQL_ROOT_PASSWORD`
-  - `MYSQL_DATABASE`
-  - `MYSQL_USER`
-  - `MYSQL_PASSWORD`
-
 ## Stopping the Application
 
 To stop the application, use the following command:
